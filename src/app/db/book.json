@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "book 1",
+      "category": "1",
+      "description": "1",
+      "price": "1",
+      "rate": "1"
+    },
+    {
+      "id": 2,
+      "title": "book 2",
+      "category": "2",
+      "description": "2",
+      "price": "2",
+      "rate": "2"
+    },
+    {
+      "id": 3,
+      "title": "book 3",
+      "category": "5",
+      "description": "3",
+      "price": "3",
+      "rate": "3"
+    }
+  ]
+}

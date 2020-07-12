@@ -1,0 +1,44 @@
+<div class="container">
+    <div id="header-modal">
+        <p *ngIf="book.id === 0 ">Add New Book</p>
+        <p *ngIf="book.id > 0 ">Edit Book</p>
+    </div>
+    <div class="modal-header">
+
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputbook">Book Title</label>
+                    <input [(ngModel)]="book.title" type="text" class="form-control" id="inputbook"
+                        [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputCategory">Category</label>
+                    <input [(ngModel)]="book.category" type="text" class="form-control" id="inputCategory"
+                        [ngModelOptions]="{standalone: true}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputdes">Description</label>
+                <input [(ngModel)]="book.description" type="text" class="form-control" id="inputdes"
+                    [ngModelOptions]="{standalone: true}">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">Price</label>
+                    <input [(ngModel)]="book.price" type="text" class="form-control" id="inputCity"
+                        [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputState">Book Rate</label>
+                    <input [(ngModel)]="book.rate" type="text" class="form-control" id="inputCity"
+                        [ngModelOptions]="{standalone: true}">
+                </div>
+            </div>
+            <button *ngIf="book.id === 0 " class="btn btn-primary" (click)="onAddBook()">Add Book</button>
+            <button *ngIf="book.id  >  0 " class="btn btn-primary" (click)="onEditBook()">Edit Book</button>
+            &nbsp;<button (click)="bsModalRef.hide()" class="btn btn-danger">Cancel</button>
+        </form>
+    </div>
+</div>
